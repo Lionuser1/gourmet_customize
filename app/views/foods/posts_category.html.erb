@@ -1,2 +1,14 @@
-<h1>Foods#posts_category</h1>
-<p>Find me in app/views/foods/posts_category.html.erb</p>
+<div>
+  <h2><%= @posts[0].category %> 리스트입니다.</h2>
+</div>
+
+<hr>
+
+<% @posts.reverse.each do |post| %>
+<div style="border: 1px solid #ffffff">
+  <h4><%= post.title %></h4>
+  <p style="color: #ff0000"><%= post.category %></p>
+  <p>작성자 아이디</p>
+  <p><%= post.content %></p>
+</div>
+<% end %>
