@@ -1,6 +1,6 @@
 <% @posts.reverse.each do |post| %>
 <div style="border: 1px solid #ffffff">
-  <h4><a href="/foods/show/<%= post.id %>"><%= post.title %></a></h4>
+  <h4><a href="/foods/show/<%= post.id %>"><%= post.title %></a> [<%= post.comments.count %>]</h4>
   <p style="color: #ff0000"><%= post.category %></p>
   <p>작성자 아이디</p>
 </div>

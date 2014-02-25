@@ -1,5 +1,5 @@
-<h2>맛집 정보 보기</h2>
 <p><%= flash[:alert] %></p>
+<h2>맛집 정보 보기</h2>
 
 <div style="border: 1px solid #ffffff">
   <h4>제목: <%= @post.title %></h4>
@@ -9,7 +9,7 @@
   <p><a href="/foods/edit/<%= @post.id %>">수정</a> | <a href="/foods/delete_complete/<%= @post.id %>">삭제</a></p>
   <hr>
   <% @post.comments.each do |comment| %>
-  <p><strong>아이디</strong> <%= comment.content %></p>
+  <p><strong>아이디</strong> <%= comment.content %> | <a href="/foods/delete_comment_complete/<%= comment.id %>">삭제</a></p>
   <% end %>
   <form action="/foods/write_comment_complete" method="post">
     <input type="hidden" name="post_id" value="<%= @post.id %>">
