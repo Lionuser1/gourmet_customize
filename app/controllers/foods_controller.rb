@@ -24,6 +24,17 @@ class FoodsController < ApplicationController
   end
 
   def write_complete
+    post = Post.new
+    post.category = params[:post_category]
+    post.title = params[:post_title]
+    post.content = params[:post_content]
+    if post.save
+      flash[:alert] = "저장되었습니다."
+      redirect_to "/foods/show/#{post.id}"
+    else
+      flash[:alert] = post.errors.values.flatten.join(' ')
+      redirect_to :back
+    end
   end
 
   def edit

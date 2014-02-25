@@ -1,2 +1,15 @@
-<h1>Foods#write</h1>
-<p>Find me in app/views/foods/write.html.erb</p>
+<h2>맛집 추가하기</h2>
+<p><%= flash[:alert] %></p>
+
+<form action="/foods/write_complete" method="post">
+  <p style="color: #ff0000">분류:
+  <select name="post_category">
+    <option value="한식">한식</option>
+    <option value="일식">일식</option>
+    <option value="중식">중식</option>
+    <option value="양식">양식</option>
+  </select></p>
+  <p>제목: <input type="text" name="post_title" placeholder="제목을 입력하세요."></p>
+  <p>내용: <textarea name="post_content" placeholder="내용을 입력하세요."></textarea></p>
+  <input type="submit" value="추가하기">
+</form>
