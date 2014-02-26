@@ -13,7 +13,9 @@
   <% end %>
   <form action="/foods/write_comment_complete" method="post">
     <input type="hidden" name="post_id" value="<%= @post.id %>">
+    <% if !@comment_writer.nil? %>
     <p><strong><%= @comment_writer.username %></strong>: <input type="text" name="comment_content" placeholder="댓글 내용을 입력하세요."> <input type="submit" value="달기"></p>
+    <% end %>
   </form>
   <p><a href="/">전체 리스트 가기</a></a></p>
 </div>
