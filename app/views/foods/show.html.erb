@@ -9,11 +9,11 @@
   <p><a href="/foods/edit/<%= @post.id %>">수정</a> | <a href="/foods/delete_complete/<%= @post.id %>">삭제</a></p>
   <hr>
   <% @post.comments.each do |comment| %>
-  <p><strong>아이디</strong> <%= comment.content %> | <a href="/foods/delete_comment_complete/<%= comment.id %>">삭제</a></p>
+  <p><strong><%= comment.user.username %></strong> <%= comment.content %> | <a href="/foods/delete_comment_complete/<%= comment.id %>">삭제</a></p>
   <% end %>
   <form action="/foods/write_comment_complete" method="post">
     <input type="hidden" name="post_id" value="<%= @post.id %>">
-    <p>작성자 아이디: <input type="text" name="comment_content" placeholder="댓글 내용을 입력하세요."> <input type="submit" value="달기"></p>
+    <p><strong><%= @comment_writer.username %></strong>: <input type="text" name="comment_content" placeholder="댓글 내용을 입력하세요."> <input type="submit" value="달기"></p>
   </form>
   <p><a href="/">전체 리스트 가기</a></a></p>
 </div>
