@@ -1,8 +1,12 @@
-<p><%= flash[:alert] %></p>
-<h2>로그인하기</h2>
-
-<form action="/users/login_complete" method="post">
-  <p>아이디: <input type="text" name="username"></p>
-  <p>비밀번호: <input type="password" name="password"></p>
-  <input type="submit" value="로그인">
-</form>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+		<h2 class="text-center form-signin-heading">로그인하기</h2>
+		<p><%= flash[:alert] %></p>
+		<form class="form-signin"action="/users/create_session" method="post">
+			<p class="text-center"><input class="form-control"type="text" placeholder="ID" name="username"></p>
+			<p class="text-center"><input class="form-control"type="password" placeholder="Password" name="password"></p>
+			<input class="text-center btn btn-lg btn-danger btn-block"type="submit" value="로그인">
+		</form>
+	</div>
+</div>

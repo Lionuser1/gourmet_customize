@@ -9,16 +9,16 @@
           <li><a href="/chinese">중식</a></li>
           <li><a href="/japanese">일식</a></li>
           <li><a href="/western">양식</a></li>
-          <li><a href="/foods/new">맛집 추가하기</a></li>
+          <li><a href="/foods/write">맛집 추가하기</a></li>
         </ul>
         <% if session[:user_id].nil? %>
         <ul class="nav navbar-nav pull-right">
-          <li ><a href="/users/new_session">로그인</a></li>
-          <li><a href="/users/new">회원가입</a></li>
+          <li ><a href="/users/login">로그인</a></li>
+          <li><a href="/users/signup">회원가입</a></li>
         </ul>
         <% else %>
         <ul class="nav navbar-nav pull-right">
-          <li class=""><a href="/users/destroy_session">로그아웃</a></li>
+          <li class=""><a href="/users/logout_complete">로그아웃</a></li>
         </ul>
         <% end %>
       </div>
