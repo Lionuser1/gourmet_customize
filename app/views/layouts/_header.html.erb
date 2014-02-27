@@ -1,7 +1,27 @@
-<h4><a href="/">Codelion 맛집 평가</a> || <a href="/korean">한식</a> | <a href="/japanese">일식</a> | <a href="/chinese">중식</a> | <a href="/western">양식</a> || <a href="/foods/write">글쓰기</a> || 
-<% if session[:user_id].nil? %>
-<a href="/users/signup">회원가입</a> | <a href="/users/login">로그인</a>
-<% else %>
-<a href="/users/logout_complete">로그아웃</a>
-<% end %>
-</h4>
+<div class="container"><div class="row"><h1 class="text-center"><a href="/"class="btn btn-lg btn-danger">코드라이온 맛집 블로그</a></h1></div></div></div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="navbar navbar-default" id="bs-example-navbar-collapse-1">
+      <div class="container">
+        <ul class="nav navbar-nav pull-left">
+          <li class="text-left"><a href="/korean">한식</a></li>
+          <li><a href="/chinese">중식</a></li>
+          <li><a href="/japanese">일식</a></li>
+          <li><a href="/western">양식</a></li>
+          <li><a href="/foods/new">맛집 추가하기</a></li>
+        </ul>
+        <% if session[:user_id].nil? %>
+        <ul class="nav navbar-nav pull-right">
+          <li ><a href="/users/new_session">로그인</a></li>
+          <li><a href="/users/new">회원가입</a></li>
+        </ul>
+        <% else %>
+        <ul class="nav navbar-nav pull-right">
+          <li class=""><a href="/users/destroy_session">로그아웃</a></li>
+        </ul>
+        <% end %>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</div><!-- /.container-fluid -->
