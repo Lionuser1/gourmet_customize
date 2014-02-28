@@ -1,4 +1,4 @@
-<%= flash[:alert] %>
+<!--<%= flash[:alert] %>
 
 <div>
   <h2>Codelion의 맛집 평가 사이트에 오신 여러분들을 환영합니다.</h2>
@@ -8,3 +8,15 @@
 <hr>
 
 <%= render :partial => "foods/posts" %>
+-->
+
+<div class="container">
+	<div class="row">
+	<%= flash[:alert] %>
+	<div class="well">
+		<h2 class="text-center">Codelion의 맛집 평가 사이트에 오신 여러분들을 환영합니다.</h2>
+		<p class="text-center">최상의 맛집들을 모았습니다.</p>
+	</div>
+	<%= render :partial => "foods/posts" %>
+	</div>
+</div>

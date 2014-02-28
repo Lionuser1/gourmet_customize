@@ -11,3 +11,36 @@
  *= require_self
  *= require_tree .
  */
+@font-face{
+	font-family: :'RixMGoM';
+	src: url('/fonts/RixMGoM.eot');
+	src: url('/fonts/RixMGoM.eot?#iefix') format('eot');
+	src: local('☺'),
+	url('/fonts/RixMGoM.woff') format('woff'),
+	url('/fonts/RixMGoM.ttf') format('ttf'),
+	url('/fonts/RixMGoM.svg#webfontFHzvtkso') format('svg');
+}
+@font-face {
+	font-family: 'RixMGoL';
+	src: url('/fonts/RixMGoL.eot');
+	src: url('/fonts/RixMGoL.eot?#iefix') format('eot');
+	src: local('☺'),
+	url('/fonts/RixMGoL.woff') format('woff'),
+	url('/fonts/RixMGoL.ttf') format('ttf'),
+	url('/fonts/RixMGoL.svg#webfontFHzvtkso') format('svg');
+}
+@font-face {
+	font-family: 'RixMGoB';
+	src: url('/fonts/RixMGoB.eot');
+	src: url('/fonts/RixMGoB.eot?#iefix') format('eot');
+	src: local('☺'),
+	url('/fonts/RixMGoB.woff') format('woff'),
+	url('/fonts/RixMGoB.ttf') format('ttf'),
+	url('/fonts/RixMGoB.svg#webfontFHzvtkso') format('svg');
+}
+body{
+	font-family: 'RixMGoB'; important!
+}
+h1,h2,h3,h4,h5{
+	font-family: 'RixMGoB'; important!
+}
