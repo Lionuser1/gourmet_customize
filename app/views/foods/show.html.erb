@@ -1,22 +1,37 @@
-<p><%= flash[:alert] %></p>
-<h2>맛집 정보 보기</h2>
-
-<div style="border: 1px solid #ffffff">
-  <p><img src="<%= @post.image_url(:medium) %>"></p>
-  <h4>제목: <%= @post.title %></h4>
-  <p style="color: #ff0000">분류: <%= @post.category %></p>
-  <p>내용: <%= @post.content %></p>
-
-  <p><a href="/foods/edit/<%= @post.id %>">수정</a> | <a href="/foods/delete_complete/<%= @post.id %>">삭제</a></p>
-  <hr>
-  <% @post.comments.each do |comment| %>
-  <p><strong><%= comment.user.username %></strong> <%= comment.content %> | <a href="/foods/delete_comment_complete/<%= comment.id %>">삭제</a></p>
-  <% end %>
-  <form action="/foods/write_comment_complete" method="post">
-    <input type="hidden" name="post_id" value="<%= @post.id %>">
-    <% if !@comment_writer.nil? %>
-    <p><strong><%= @comment_writer.username %></strong>: <input type="text" name="comment_content" placeholder="댓글 내용을 입력하세요."> <input type="submit" value="달기"></p>
-    <% end %>
-  </form>
-  <p><a href="/">전체 리스트 가기</a></a></p>
+<div class="container">
+  <div class="row">
+    <p><%= flash[:alert] %></p>
+    <h2 class="text-center">맛집 정보 보기</h2>
+    <div class="col-md-6">
+        <p><img src="<%= @post.image_url(:medium) %>"></p>
+    </div> 
+    <div class="col-md-6">
+      <h4><span class="glyphicon glyphicon-plus">제목:</span><%= @post.title %></h4>
+      <h4><span class="glyphicon glyphicon-plus">분류:</span><%= @post.category %></h4>
+      <h4><span class="glyphicon glyphicon-plus">내용:</span><%= @post.content %></h4>
+      <p><a class="submit_user"href="/foods/edit/<%= @post.id %>">수정</a> | <a class="submit_user"href="/foods/delete_complete/<%= @post.id %>">삭제</a></p>
+          <% @post.comments.each do |comment| %>
+          <p><strong><%= comment.user.username %></strong> <%= comment.content %> | <a href="/foods/delete_comment_complete/<%= comment.id %>">삭제</a></p>
+          <% end %>
+    </div>    
+  </div>
+  <br>
+  <div class="row">
+          <form action="/foods/write_comment_complete" class="form-horizontal"method="post">
+            <div class="form-group">
+              <input type="hidden" class="form-control"name="post_id" value="<%= @post.id %>">
+              <% if !@comment_writer.nil? %>
+                <label for="inputEmail3" class="col-sm-1  col-sm-offset-1 control-label"<strong><h4><%= @comment_writer.username %></h4></strong></label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control input_user"name="comment_content" placeholder="댓글 내용을 입력하세요."> 
+              </div>
+              <div class="col-sm-2">
+                <input type="submit" class="form-control submit_user" value="달기">
+              </div>
+     
+            <% end %>
+            </div>
+          </form>
+    <p class="text-center"><a class="show_list" href="/">전체 리스트 가기</a></p>    
+  </div>
 </div>
