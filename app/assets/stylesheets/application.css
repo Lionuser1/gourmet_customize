@@ -39,8 +39,26 @@
 	url('/fonts/RixMGoB.svg#webfontFHzvtkso') format('svg');
 }
 body{
-	font-family: 'RixMGoB'; important!
+	font-family: 'RixMGoM'  !important;
+	color:#656970 !important;
 }
-h1,h2,h3,h4,h5{
-	font-family: 'RixMGoB'; important!
+h1,h2,h3,h4,h5,p,a{
+	font-family: 'RixMGoB'  !important;
+	color:#656970 !important;
+}
+.blog_name{
+	height:120px;
+	padding-top:50px;
+}
+a{color:#ee3b53 !important;}
+a:hover{color:#a3293d !important;
+text-decoration: none !important; }
+.navbar{
+	background-color: #ee3b53 !important;
+}
+.nav_list{
+	color:white !important;
+}
+.nav_list:hover{
+	background-color: white !important;
 }
