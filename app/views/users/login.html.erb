@@ -1,12 +1,15 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
-		<h2 class="text-center form-signin-heading">로그인하기</h2>
+		<h3 class="text-center form-signin-heading">로그인하기</h3>
 		<p><%= flash[:alert] %></p>
 		<form class="form-signin"action="/users/login_complete" method="post">
-			<p class="text-center"><input class="form-control"type="text" placeholder="ID" name="username"></p>
-			<p class="text-center"><input class="form-control"type="password" placeholder="Password" name="password"></p>
-			<input class="text-center btn btn-lg btn-danger btn-block"type="submit" value="로그인">
+			<p class="text-center"><input class="form-control input_user"type="text" placeholder="ID" name="username"></p>
+			<p class="text-center"><input class="form-control input_user"type="password" placeholder="Password" name="password"></p>
+			<input class="text-center btn btn-lg btn-block submit_user"type="submit" value="로그인">
 		</form>
 	</div>
 </div>
+
+
+<!--input_user, submit_user class를 추가 하였습니다.  그리고 부트스트랩의 .form-control:focus .form-signin-heading를 수정하였습니다. -->
