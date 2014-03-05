@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
 @font-face{
 	font-family: :'RixMGoM';
 	src: url('/fonts/RixMGoM.eot');
@@ -20,6 +21,7 @@
 	url('/fonts/RixMGoM.ttf') format('ttf'),
 	url('/fonts/RixMGoM.svg#webfontFHzvtkso') format('svg');
 }
+
 @font-face {
 	font-family: 'RixMGoL';
 	src: url('/fonts/RixMGoL.eot');
@@ -29,6 +31,7 @@
 	url('/fonts/RixMGoL.ttf') format('ttf'),
 	url('/fonts/RixMGoL.svg#webfontFHzvtkso') format('svg');
 }
+
 @font-face {
 	font-family: 'RixMGoB';
 	src: url('/fonts/RixMGoB.eot');
@@ -38,27 +41,39 @@
 	url('/fonts/RixMGoB.ttf') format('ttf'),
 	url('/fonts/RixMGoB.svg#webfontFHzvtkso') format('svg');
 }
-body{
+
+body {
 	font-family: 'RixMGoM'  !important;
-	color:#656970 !important;
+	color: #656970 !important;
 }
-h1,h2,h3,h4,h5,p,a{
+
+h1,h2,h3,h4,h5,p,a {
 	font-family: 'RixMGoB'  !important;
-	color:#656970 !important;
+	color: #656970 !important;
 }
-.blog_name{
-	height:120px;
-	padding-top:50px;
+
+.blog_name {
+	height: 120px;
+	padding-top: 50px;
 }
-a{color:#ee3b53 !important;}
-a:hover{color:#a3293d !important;
-text-decoration: none !important; }
-.navbar{
+
+a {
+	color: #ee3b53 !important;
+}
+
+a:hover {
+	color: #a3293d !important;
+	text-decoration: none !important; 
+}
+
+.navbar {
 	background-color: #ee3b53 !important;
 }
-.nav_list{
-	color:white !important;
+
+.nav_list {
+	color: #ffffff !important;
 }
-.nav_list:hover{
-	background-color: white !important;
+
+.nav_list:hover {
+	background-color: #ffffff !important;
 }

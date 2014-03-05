@@ -17,7 +17,7 @@ class FoodsController < ApplicationController
     else
       @category = "양식"
     end
-      @posts = Post.where(category: @category)
+		@posts = Post.where(category: @category)
   end
 
   def show

@@ -1,28 +1,31 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.input_user{
-	height:50px !important;
+.input_user {
+	height: 50px !important;
+}
 
+.submit_user {
+	height: 55px !important;
+	background-color: #efba5a !important;
+	color: #ffffff !important;
 }
-.submit_user{
-	height:55px !important;
-	background-color:#efba5a !important;
-	color:white !important;
+
+.submit_user:hover {
+	height: 55px !important;
+	border: 1.5px solid #efba5a !important;
+	background-color: #ffffff !important;
+	color: #efba5a !important;
 }
-.submit_user:hover{
-	height:55px !important;
-	border:1.5px solid #efba5a !important;
-	background-color:white !important;
-	color:#efba5a !important;
-}
+
 .form-control:focus {
-border-color: #e6d356;
-outline: 0;
--webkit-box-shadow: inset 0 1px 1px rgba(230,211,86,.075), 0 0 8px rgba(230, 211, 86, .6);
-box-shadow: inset 0 1px 1px rgba(230,211,86,.075), 0 0 8px rgba(230, 211, 86, .6);
+	border-color: #e6d356;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(230,211,86,.075), 0 0 8px rgba(230, 211, 86, .6);
+	box-shadow: inset 0 1px 1px rgba(230,211,86,.075), 0 0 8px rgba(230, 211, 86, .6);
 }
-.form-signin-heading{
-	margin-top:35px !important;
+
+.form-signin-heading {
+	margin-top: 35px !important;
 	margin-bottom: 20px !important;
 }

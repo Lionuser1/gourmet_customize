@@ -1,27 +1,24 @@
 <div class="container">
   <div class="row">
-    <h1 class="text-center blog_name"><a href="/">코드라이온 맛집 블로그</a></h1>
+    <h1 class="text-center blog_name"><a href="/">Codelion 맛집 평가</a></h1>
   </div>
 </div>
-<!--여기서 blog_name이라는 class를 추가했습니다. ( application.css 파일에 class추가 ) -->
-
-
 
 <div class="container-fluid">
   <div class="row">
     <div class="navbar navbar-default" id="bs-example-navbar-collapse-1">
       <div class="container">
         <ul class="nav navbar-nav pull-left">
-          <li class="text-left"><a href="/korean"class="nav_list">한식</a></li>
-          <li><a href="/chinese"class="nav_list">중식</a></li>
-          <li><a href="/japanese"class="nav_list">일식</a></li>
-          <li><a href="/western"class="nav_list">양식</a></li>
-          <li><a href="/foods/write"class="nav_list">맛집 추가하기</a></li>
+          <li class="text-left"><a href="/korean" class="nav_list">한식</a></li>
+          <li><a href="/chinese" class="nav_list">중식</a></li>
+          <li><a href="/japanese" class="nav_list">일식</a></li>
+          <li><a href="/western" class="nav_list">양식</a></li>
+          <li><a href="/foods/write" class="nav_list">맛집 추가하기</a></li>
         </ul>
         <% if session[:user_id].nil? %>
         <ul class="nav navbar-nav pull-right">
           <li ><a href="/users/login" class="nav_list">로그인</a></li>
-          <li><a href="/users/signup"class="nav_list">회원가입</a></li>
+          <li><a href="/users/signup" class="nav_list">회원가입</a></li>
         </ul>
         <% else %>
         <ul class="nav navbar-nav pull-right">
@@ -32,7 +29,3 @@
     </div>
   </div>
 </div>
-
-<!--여기서 nav_list이라는 class를 추가했습니다. ( application.css 파일에 class추가 ) -->
-
-<!--application.css라는 파일에 font, font_color, nav, blog_name의 css를 추가하였습니다.-->
